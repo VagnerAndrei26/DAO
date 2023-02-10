@@ -50,7 +50,7 @@ contract SimpleDAO is Ownable {
     }
 
     mapping(uint256 => Proposal) public proposals;
-    uint256 public numberProposals;
+    uint256 public numProposals;
 
     IFakeNFTMarketplace nftMarketplace;
     ICryptoDevsNFT nftContract;
@@ -82,13 +82,13 @@ contract SimpleDAO is Ownable {
     
     function createProposal(uint _nftTokenId) external onlyOwnerOfNft returns(uint) {
         require(nftMarketplace.available(_nftTokenId), "NFT is not for sale");
-        Proposal storage proposal = proposals[numberProposals];
+        Proposal storage proposal = proposals[numProposals];
         proposal.nftTokenId = _nftTokenId;
         proposal.deadline = block.timestamp + 5 minutes;
 
-        numberProposals ++;
+        numProposals ++;
 
-        return numberProposals - 1;
+        return numProposals - 1;
     }
 
 

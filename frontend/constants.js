@@ -1,4 +1,4 @@
-export const CRYPTODEVS_DAO_CONTRACT_ADDRESS = "0x0290765d27945540282D8A3f500438497EFE6c83";
+export const CRYPTODEVS_DAO_CONTRACT_ADDRESS = "0xC60BaDE5836953dC556ccB5AbA97E930E200F8f0";
 export const CRYPTODEVS_NFT_CONTRACT_ADDRESS = "0xC61dd4B385a77d7CF8f79f6e28B8e9992794c2d9";
 
 export const CRYPTODEVS_DAO_ABI = [
@@ -75,7 +75,7 @@ export const CRYPTODEVS_DAO_ABI = [
     },
     {
       "inputs": [],
-      "name": "numberProposals",
+      "name": "numProposals",
       "outputs": [
         {
           "internalType": "uint256",

@@ -100,7 +100,7 @@ export default function Home() {
     try {
       const provider = await getProviderOrSigner();
       const contract = getDaoContractInstance(provider);
-      const daoNumProposals = await contract.numberProposals();
+      const daoNumProposals = await contract.numProposals();
       setNumProposals(daoNumProposals.toString());
     } catch (error) {
       console.error(error);
